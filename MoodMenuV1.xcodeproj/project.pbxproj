@@ -13,6 +13,11 @@
 		9454359F2BF36D9100D94F01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9454359E2BF36D9100D94F01 /* Preview Assets.xcassets */; };
 		945435A12BF36D9100D94F01 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945435A02BF36D9100D94F01 /* Persistence.swift */; };
 		945435A42BF36D9100D94F01 /* MoodMenuV1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 945435A22BF36D9100D94F01 /* MoodMenuV1.xcdatamodeld */; };
+		94DE634A2BF3741A005A71C2 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE63492BF3741A005A71C2 /* StatusBarController.swift */; };
+		94DE634C2BF37453005A71C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE634B2BF37453005A71C2 /* AppDelegate.swift */; };
+		94DE634E2BF3747C005A71C2 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE634D2BF3747C005A71C2 /* PopoverView.swift */; };
+		94DE63512BF3A1F6005A71C2 /* MoodData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE634F2BF3A1F6005A71C2 /* MoodData+CoreDataClass.swift */; };
+		94DE63522BF3A1F6005A71C2 /* MoodData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE63502BF3A1F6005A71C2 /* MoodData+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		945435A02BF36D9100D94F01 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		945435A32BF36D9100D94F01 /* MoodMenuV1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoodMenuV1.xcdatamodel; sourceTree = "<group>"; };
 		945435A52BF36D9100D94F01 /* MoodMenuV1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoodMenuV1.entitlements; sourceTree = "<group>"; };
+		94DE63492BF3741A005A71C2 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		94DE634B2BF37453005A71C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94DE634D2BF3747C005A71C2 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
+		94DE634F2BF3A1F6005A71C2 /* MoodData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		94DE63502BF3A1F6005A71C2 /* MoodData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +50,9 @@
 		9454358B2BF36D9000D94F01 = {
 			isa = PBXGroup;
 			children = (
+				94DE634D2BF3747C005A71C2 /* PopoverView.swift */,
+				94DE63462BF373C4005A71C2 /* MenuBar */,
+				945435AF2BF36F2600D94F01 /* CoreData */,
 				945435962BF36D9000D94F01 /* MoodMenuV1 */,
 				945435952BF36D9000D94F01 /* Products */,
 			);
@@ -59,9 +72,7 @@
 				945435972BF36D9000D94F01 /* MoodMenuV1App.swift */,
 				945435992BF36D9000D94F01 /* ContentView.swift */,
 				9454359B2BF36D9100D94F01 /* Assets.xcassets */,
-				945435A02BF36D9100D94F01 /* Persistence.swift */,
 				945435A52BF36D9100D94F01 /* MoodMenuV1.entitlements */,
-				945435A22BF36D9100D94F01 /* MoodMenuV1.xcdatamodeld */,
 				9454359D2BF36D9100D94F01 /* Preview Content */,
 			);
 			path = MoodMenuV1;
@@ -73,6 +84,26 @@
 				9454359E2BF36D9100D94F01 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		945435AF2BF36F2600D94F01 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				94DE634F2BF3A1F6005A71C2 /* MoodData+CoreDataClass.swift */,
+				94DE63502BF3A1F6005A71C2 /* MoodData+CoreDataProperties.swift */,
+				945435A02BF36D9100D94F01 /* Persistence.swift */,
+				945435A22BF36D9100D94F01 /* MoodMenuV1.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		94DE63462BF373C4005A71C2 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				94DE63492BF3741A005A71C2 /* StatusBarController.swift */,
+				94DE634B2BF37453005A71C2 /* AppDelegate.swift */,
+			);
+			path = MenuBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DE634C2BF37453005A71C2 /* AppDelegate.swift in Sources */,
 				945435A12BF36D9100D94F01 /* Persistence.swift in Sources */,
+				94DE634A2BF3741A005A71C2 /* StatusBarController.swift in Sources */,
 				9454359A2BF36D9000D94F01 /* ContentView.swift in Sources */,
+				94DE63512BF3A1F6005A71C2 /* MoodData+CoreDataClass.swift in Sources */,
+				94DE63522BF3A1F6005A71C2 /* MoodData+CoreDataProperties.swift in Sources */,
+				94DE634E2BF3747C005A71C2 /* PopoverView.swift in Sources */,
 				945435A42BF36D9100D94F01 /* MoodMenuV1.xcdatamodeld in Sources */,
 				945435982BF36D9000D94F01 /* MoodMenuV1App.swift in Sources */,
 			);
